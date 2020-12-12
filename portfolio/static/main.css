@@ -533,7 +533,7 @@ footer .main-content .right-box .social-links a #instagram {
 }
 
 .home-container .heading {
-  font-family: Fira Code, sans-serif;
+  font-family: Fira Code;
   font-size: 32px;
 }
 
@@ -544,7 +544,7 @@ footer .main-content .right-box .social-links a #instagram {
 
 .home-container .content {
   text-align: justify;
-  font-family: Fira Code, sans-serif;
+  font-family: Fira Code;
   padding: 40px 0;
   line-height: 1.6em;
 }
