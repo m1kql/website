@@ -1097,15 +1097,15 @@ footer .main-content .right-box .social-links a #instagram {
 
 @media screen and (max-width: 767px) {
   .timeline-container {
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
   }
 }
 
 @media screen and (max-width: 1402px) and (min-width: 768px) {
   .timeline-container {
-    margin-left: 3em;
-    margin-right: 3em;
+    margin-left: 2em;
+    margin-right: 2em;
   }
 }
 
