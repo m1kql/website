@@ -120,6 +120,13 @@ MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 
 
+# EMAIL 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.environ['email_host']
+EMAIL_HOST_PASSWORD = os.environ['email_password']
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 

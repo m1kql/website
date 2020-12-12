@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Contact Me{% endblock %}
+{% load static %}
+{% block content %}
+<section class="contact">
+    <div class="contact-container">
+        <h3>Contact me directly!</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="userdetails">
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname" id="firstname">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" id="lastname">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="message">
+                <label for="message">Message</label>
+                <textarea type="text" name="message" id="message" style="font-family: Arial, Helvetica, sans-serif; font-weight: normal;"></textarea>
+            </div>
+            <div class="submit">
+                <button type="submit" id="send">Send</button>
+            </div>            
+        </form>
+    </div>
+</section>
+{% endblock %}

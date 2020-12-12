@@ -20,3 +20,30 @@ def AboutView(request):
 #view my projects
 def ProjectsView(request):
     return render(request, 'projects.html')
+
+#view contact form + contact form submission
+def SocialView(request):
+    if request.method == 'POST':
+        message = request.POST['message']
+        firstname = request.POST['firstname']
+        lastname = request.POST['lastname']
+        email = request.POST['email']
+
+        template = get_template('contact_template.txt')
+        context = {
+            'contact_fname': firstname,
+            'contact_lname': lastname,
+            'contact_email': email,
+            'form_content': message,
+        }
+
+        content = template.render(context)
+
+        send_mail(
+            'New contact form submission:', 
+            content, 
+            settings.EMAIL_HOST_USER,
+            ['liang.mike.to@gmail.com'],
+            fail_silently=False
+            )
+    return render(request, 'contact.html')
