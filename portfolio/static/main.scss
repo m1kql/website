@@ -902,8 +902,7 @@ footer {
         justify-content: center;
         ul {
             width: 40%;
-            font-family: Fira Code;
-            list-style: "=>  ";
+            list-style: "»  ";
             font-size: 20px;
 
             li {
@@ -928,6 +927,20 @@ footer {
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .timeline-container {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+}
+
+@media screen and (max-width: 1402px ) and (min-width: 768px) {
+    .timeline-container {
+        margin-left: 3em;
+        margin-right: 3em;
     }
 }
 

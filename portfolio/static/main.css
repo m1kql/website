@@ -1065,8 +1065,7 @@ footer .main-content .right-box .social-links a #instagram {
 
 .timeline-container .timeline ul {
   width: 40%;
-  font-family: Fira Code;
-  list-style: "=>  ";
+  list-style: "»  ";
   font-size: 20px;
 }
 
@@ -1094,6 +1093,20 @@ footer .main-content .right-box .social-links a #instagram {
 .timeline-container .timeline ul li .content p {
   font-size: 14px;
   text-align: justify;
+}
+
+@media screen and (max-width: 767px) {
+  .timeline-container {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+}
+
+@media screen and (max-width: 1402px) and (min-width: 768px) {
+  .timeline-container {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
 }
 
 /**********************************************************************************/
