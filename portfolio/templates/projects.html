@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}My Projects{% endblock %}
+{% block content %}
+<section class="projects">
+    <div class="projects-container">
+        <!--DMOJ SOLUTIONS CARD-->
+        <div class="container">
+            <div class="card-1">
+                <div class="card-content">
+                    <p class="card__titleone">
+                        DMOJ Solutions
+                    </p>
+                    <div class="card__info">
+                        <div id="subtitles">
+                            <p class="subtitle1">Main Lang: C++</p>
+                            <p class="subtitle2">Start: Nov. 27 2020</p>
+                        </div>
+                        <p class="description">
+                            Since the start of grade 9, I started to really delve into programming. I spend most of my time either on DMOJ and occasionally HackerRank trying to find creative solutions to the problems. Below are links to my profile and the repo.  
+                        </p>
+                        <div id="links">
+                            <a id="link1" target="_blank" href="https://dmoj.ca/user/yak_fumblepack">DMOJ</a>
+                            <a id="link2" target="_blank" href="https://github.com/yak-fumblepack">Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--PORTFOLIO WEBSITE-->
+        <div class="container">
+            <div class="card-1">
+                <div class="card-content">
+                    <p class="card__titletwo">
+                        Portfolio Website
+                    </p>
+                    <div class="card__info">
+                        <div id="subtitles">
+                            <p class="subtitle1">Made proudly from scratch</p>
+                            <p class="subtitle2">Start: Nov. 2 2020</p>
+                        </div>
+                        <p class="description">
+                            I started working on this website from Nov 2 and it's been quite a journey getting it to where it is right now. I made it using the Django Web Framework and learned a lot about databasews and such along the way. Below are links to the repo and my blog post about this.
+                        </p>
+                        <div id="links">
+                            <a id="link1" target="_blank" href="#">Blog</a>
+                            <a id="link2" target="_blank" href="https://github.com/yak-fumblepack/website">Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

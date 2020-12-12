@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Me{% endblock %}
+{% block content %}
+<section class="about">
+    <div class="about-container">
+        <div class="right-content">
+            <p>
+                Hi there! I'm a grade 9 student that loves learning about math and science. While I'm relatively new to the coding game, I'm excited for the great and new things that I'll learn throughout my journey through computer science. For now, I'm focusing mainly on competitive programming and being fluent in C++ (My main language of choice), and light full stack web development.   
+            </p>
+            <p>
+                The website you're looking at right now was made from scratch without any templates! It was made using the Python Django Web Framework and static files to generate this site. To learn more about how this was made, check out my blog!
+            </p>
+            <p>
+                Many of my projects can be found in my github profile (<a href="https://github.com/yak-fumblepack">here</a>), and I post at least once a month on my blog (<a href="#">here</a>) to keep things going and to update anyone who's visiting my site on what I've been working on.
+            </p>
+            <p>
+                Take a look around my website and check out my projects & blogs page if you haven't already. If you have any questions feel free to head over the <a href="#">socials</a> page and contact me directly there. 
+            </p>
+            <p id="closing">
+                <span> – </span> Cheers, Mike @yak-fumblepack
+            </p>
+        </div>
+        <div class="left-content">
+            <img src="{% static 'avatar.png' %}" alt="my github pfp">
+        </div>
+    </div>
+</section>
+{% endblock %}

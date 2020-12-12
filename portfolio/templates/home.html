@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Mike | Yak-Fumblepack{% endblock %}
+{% load static %}
+{% block content %}
+<section class="home">
+    <div class="home-container">
+        <div class="heading">
+            <p id="hi">Hi there!</p>
+            <p>I'm Mike</p>
+        </div>
+        <div class="content">
+            <ul id="description">
+                <li>I love exploring the intricacies of mathematics and science...</li>
+                <li>To learn more about me, head over <a href="{% url 'about' %}"></a>here!</a></li>
+                <li>If you wanna see what I'm up to now, check out my <a href="{% url 'projects' %}">projects!</a></li>
+                <li>Consider taking a look at my <a href="#">blog!</a></li>
+                <li>If you want to see everything I've been doing so far, check out my <a href="#">timeline!</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

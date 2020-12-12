@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/main.css' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/styles/atom-one-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="site">
+        <div class="title">
+            <header class="main-header">
+                <input type="checkbox" class="menu-btn" id="menu-btn">
+                    <label for="menu-btn" class="menu-icon">
+                        <span class="menu-icon__line"></span>
+                    </label>
+                    <ul class="navlinks">
+                        <li><a href="#" id="nameicon">Mike</a></li>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About Me</a></li>
+                        <li><a href="{% url 'projects' %}">Projects</a></li>
+                        <li><a href="#">Blog & More</a>
+                            <ul>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Timeline</a></li>
+                                <li><a href="#">Socials</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+            </header>   
+        </div>
+        {% block content %}
+        {% endblock %}
+        <footer>
+            <div class="main-content">
+                <div class="left-box">
+                    <p>Mike Liang | yak-fumblepack</p>
+                    <p>Student at AYJSS</p>
+                    <p>liang.mike.to@gmail.com</p>
+                </div>
+                <div class="right-box">
+                    <div class="social-links">
+                        <di class="button">
+                            <a href="https://github.com/yak-fumblepack" target="_blank"><span class="fab fa-github" id="github"></span></a>
+                            <a href="https://www.facebook.com/profile.php?id=100056172516579" target="_blank"><span id="facebook" class="fab fa-facebook-f"></span></a>
+                            <a href="#"><span class="fab fa-twitter" id="twitter" target="_blank"></span></a>
+                            <a href="https://www.instagram.com/mike_liangca/" target="_blank"><span class="fab fa-instagram" id="instagram"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
