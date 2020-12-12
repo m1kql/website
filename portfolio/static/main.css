@@ -51,7 +51,7 @@ footer .main-content .left-box {
 }
 
 footer .main-content .left-box p {
-  font-family: Fira Code;
+  font-family: Fira Code, 'Courier New', Courier, monospace;
   font-size: 1.125rem;
   font-weight: 100;
   line-height: 1.35em;
@@ -533,7 +533,7 @@ footer .main-content .right-box .social-links a #instagram {
 }
 
 .home-container .heading {
-  font-family: Fira Code;
+  font-family: Fira Code, 'Courier New', Courier, monospace;
   font-size: 32px;
 }
 
@@ -544,7 +544,7 @@ footer .main-content .right-box .social-links a #instagram {
 
 .home-container .content {
   text-align: justify;
-  font-family: Fira Code;
+  font-family: Fira Code, 'Courier New', Courier, monospace;
   padding: 40px 0;
   line-height: 1.6em;
 }
@@ -688,6 +688,8 @@ footer .main-content .right-box .social-links a #instagram {
       -ms-flex-pack: center;
           justify-content: center;
   padding-top: 4em 2em;
+  margin-left: 1em;
+  margin-right: 1em;
   line-height: 1.3rem;
 }
 
