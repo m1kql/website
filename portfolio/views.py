@@ -9,6 +9,7 @@ from django.contrib import messages
 from django.core.mail import EmailMessage
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Post
+from .forms import EditForm, PostForm
 
 #home view
 def home(request):
@@ -55,9 +56,9 @@ def SocialView(request):
 
 
 #View categories
-#def CategoryView(request, cats):
-    #category_posts = Post.objects.filter(category=cats)
-    #return render(request, 'categories.html', {'cats':cats, 'category_posts':category_posts})
+def CategoryView(request, cats):
+    category_posts = Post.objects.filter(category=cats)
+    return render(request, 'categories.html', {'cats':cats, 'category_posts':category_posts})
 
 #view blog posts 
 class PostView(ListView):
@@ -69,3 +70,27 @@ class PostView(ListView):
 class ArticleDetailView(DetailView):
     model = Post
     template_name = 'article_details.html'
+
+#add posts directly from the website
+class AddPostView(CreateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'add_post.html'
+    #fields = '__all__'
+
+#update posts directly from the website
+class UpdatePostView(UpdateView):
+    model = Post
+    form_class = EditForm
+    template_name = 'update_post.html'
+
+#update posts directly from the website
+class UpdateView(ListView):
+    model = Post
+    template_name = 'updatedetails.html'
+    ordering = ['-id']
+
+#delete posts directly from the website
+class DeletePostView(DeleteView):
+    model = Post
+    template_name = 'delete_post.html'
