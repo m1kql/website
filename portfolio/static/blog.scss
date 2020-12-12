@@ -1,0 +1,77 @@
+/**********************************************************************************/
+
+/* Globals */
+
+/**********************************************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+a {
+    color: #00a;
+}
+
+a:hover {
+    color: #333;
+}
+
+/**********************************************************************************/
+
+/* Article */
+
+/**********************************************************************************/
+
+.site {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    line-height: 1.5em;
+    width: 42em;
+    margin: 3em auto 2em auto;
+
+    .title {
+        padding: 2em 2em;
+        color: #a00;
+        font-weight: bold;
+        margin-bottom: 1em;
+
+        a {
+            color: #a00;
+            text-decoration: none;
+        }
+        #extra {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 1em;
+        }
+        a:hover {
+            color: #333;
+        }
+        #extra:hover {
+            color: #333;
+        }
+    }
+
+    .home {
+        padding: 0 2em;
+        padding-bottom: 4em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .site {
+        height: 90vh;
+        width: 90vw;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+

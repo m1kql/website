@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Blog Posts{% endblock %}
+{% block content %}
+<section class="blog">
+    <div class="blog-container">
+        <div class="heading">
+            <h1>Posts</h1>
+        </div>
+        <div class="post-list">
+            <ul id="posts">
+                {% for post in object_list %}
+                    <li>
+                        <a href="{% url 'article-detail' post.pk %}">{{ post.title }}</a> – <a href="{% url 'category' post.category %}">{{ post.category }}</a> <span id="date"> - {{ post.post_date }}</span>
+                        <p>{{ post.snippet }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

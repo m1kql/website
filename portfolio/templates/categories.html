@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}{{ cats }}{% endblock %}
+{% load static %}
+{% block content %}
+{% if category_posts %}
+    <section class="category">
+        <div class="category-container">
+            <div class="heading">
+                <h1>Blog category: {{ cats }}</h1>
+            </div>
+            <div class="category-post-list">
+                <ul id=post-list>
+                    {% for post in category_posts %}
+                        <li>
+                            <a href="{% url 'article-detail' post.pk %}">{{ post.title }}</a> - <span id="date">{{ post.post_date }}</span> 
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+{% else %}
+<div class="error-page">
+    <h2>Sorry this page does not exist...</h2>
+</div>
+{% endif %}
+{% endblock %}

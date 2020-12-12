@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/blog.css' %}">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/styles/atom-one-dark.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="site">
+        <div class="title">
+            <a href="{% url 'home' %}">home</a>
+            <a id="extra" href="{% url 'blog' %}">back</a>
+        </div>
+        <div class="home">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

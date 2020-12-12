@@ -8,6 +8,7 @@ from django.conf import settings
 from django.contrib import messages
 from django.core.mail import EmailMessage
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from .models import Post
 
 #home view
 def home(request):
@@ -20,6 +21,10 @@ def AboutView(request):
 #view my projects
 def ProjectsView(request):
     return render(request, 'projects.html')
+
+#view my timeline
+def TimelineView(request):
+    return render(request, 'timeline.html')
 
 #view contact form + contact form submission
 def SocialView(request):
@@ -47,3 +52,20 @@ def SocialView(request):
             fail_silently=False
             )
     return render(request, 'contact.html')
+
+
+#View categories
+def CategoryView(request, cats):
+    category_posts = Post.objects.filter(category=cats)
+    return render(request, 'categories.html', {'cats':cats, 'category_posts':category_posts})
+
+#view blog posts 
+class PostView(ListView):
+    model = Post
+    template_name = 'blog.html'
+    ordering = ['-id']
+
+#view artcle details (blog posts)
+class ArticleDetailView(DetailView):
+    model = Post
+    template_name = 'article_details.html'

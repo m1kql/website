@@ -122,15 +122,31 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 
 # EMAIL 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'liang.mike.to@gmail.com'
+EMAIL_HOST_USER = os.environ['email_host']
 EMAIL_HOST_PASSWORD = os.environ['email_password']
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
+# CKEDITOR
+CKEDITOR_JQUERY_URL = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
-
-
+CKEDITOR_CONFIGS = {
+    'default': {
+        'config.skin': 'office2013',
+        'toolbar' : 'Custom',
+        'toolbar_Custom': [
+            ['Styles','Format','Font','FontSize','CodeSnippet'],
+            ['Bold','Italic','Underline','Strike','-','Undo','Redo','-','Cut','Copy','Paste','Find','Replace','-','Outdent','Indent','-','Print'],
+            ['NumberedList','BulletedList','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+            ['Image','Table','-','Link','Flash','Smiley','TextColor','BGColor','Source'],
+        ],
+        'height': 650,
+        'width' : 1400,
+        'extraPlugins': ','.join(['codesnippet']),
+    },
+}
 
 
 

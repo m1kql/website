@@ -1,0 +1,17 @@
+{% extends 'articlebase.html' %}
+{% block title %}{{ post.title_tag }}{% endblock %}
+{% load static %}
+{% block content %}
+<section class="articles">
+    <div class="articles-container">
+        <div class="heading">
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.post_date }}</p>
+            <p>By: {{ post.author.first_name }} {{ post.author.last_name }}</p>
+        </div>
+        <div class="content">
+            {{ post.body|safe }}
+        </div>
+    </div>
+</section>
+{% endblock %}
