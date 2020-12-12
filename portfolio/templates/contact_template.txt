@@ -1,0 +1,11 @@
+Sender-First Name:
+{{ contact_fname }}
+
+Sender-Last Name:
+{{ contact_lname }}
+
+Sender-Email:
+{{ contact_email }}
+
+Sender-Content:
+{{ form_content|safe|striptags }}
