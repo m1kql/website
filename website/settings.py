@@ -124,7 +124,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 
 
 # EMAIL 
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.zoho.com'
 EMAIL_HOST_USER = 'liang.mike.to@gmail.com'
 EMAIL_HOST_PASSWORD = os.environ['email_password']
 EMAIL_PORT = 587
