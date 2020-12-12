@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'portfolio',
     'login',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -149,10 +151,12 @@ CKEDITOR_CONFIGS = {
     },
 }
 
+# Login Redirects
+LOGIN_REDIRECT_URL = 'add_post'
+LOGOUT_REDIRECT_URL = 'home'
 
 
-
-
+# HEROKU AND DATABASE SETTINGS
 django_heroku.settings(locals())
 options = DATABASES['default'].get('OPTIONS', {})
 options.pop('sslmode', None)
