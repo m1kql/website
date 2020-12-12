@@ -11,7 +11,7 @@
             <ul id="posts">
                 {% for post in object_list %}
                     <li>
-                        <a href="{% url 'article-detail' post.pk %}">{{ post.title }}</a> – <a href="{% url 'category' post.category %}">{{ post.category }}</a> <span id="date"> - {{ post.post_date }}</span>
+                        <a href="{% url 'article-detail' post.pk %}">{{ post.title }}</a> – <!--<a href="{% url 'category' post.category %}">{{ post.category }}</a>--> <span id="date"> - {{ post.post_date }}</span>
                         <p>{{ post.snippet }}</p>
                     </li>
                 {% endfor %}

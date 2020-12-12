@@ -55,9 +55,9 @@ def SocialView(request):
 
 
 #View categories
-def CategoryView(request, cats):
-    category_posts = Post.objects.filter(category=cats)
-    return render(request, 'categories.html', {'cats':cats, 'category_posts':category_posts})
+#def CategoryView(request, cats):
+    #category_posts = Post.objects.filter(category=cats)
+    #return render(request, 'categories.html', {'cats':cats, 'category_posts':category_posts})
 
 #view blog posts 
 class PostView(ListView):
